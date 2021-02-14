@@ -1,4 +1,4 @@
-FROM alpine:3
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
 
 RUN apk --update --no-cache add nodejs nodejs-npm python3 py3-pip jq curl bash git docker && \
 	ln -sf /usr/bin/python3 /usr/bin/python
